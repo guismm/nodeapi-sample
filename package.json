@@ -1,10 +1,10 @@
 {
   "name": "nodeapi-sample",
   "version": "1.0.0",
-  "description": "Sample on how to create a structure for a Node.js API using Express, MongoDB with mongoose and Docker.",
+  "description": "Sample on how to create a structure for a Node.js API using Express, MongoDB with mongoose, Ava unit tests and Docker.",
   "main": "index.js",
   "author": "Guilherme Silveira Maia de Mendonça",
-  "license": "MIT",
+  "license": "Unlicensed",
   "dependencies": {
     "express": "4.17.1",
     "mongoose": "5.7.13"
