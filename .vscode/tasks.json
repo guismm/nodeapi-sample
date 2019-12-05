@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "type": "docker-build",
+      "label": "docker-build",
+      "platform": "node",
+      "dockerBuild": {
+        "dockerfile": "${workspaceFolder}/Dockerfile",
+        "context": "${workspaceFolder}"
+      }
+    },
+    {
+      "type": "docker-run",
+      "label": "docker-run: release",
+      "dependsOn": [
+        "docker-build"
+      ],
+      "platform": "node"
+    },
+    {
+      "type": "docker-run",
+      "label": "docker-run: debug",
+      "dependsOn": [
+        "docker-build"
+      ],
+      "dockerRun": {
+        "env": {
+          "DEBUG": "*",
+          "NODE_ENV": "development"
+        },
+        "ports": [
+          {
+            "containerPort": 45000,
+            "protocol": "tcp",
+            "hostPort": 45000
+          },
+          {
+            "containerPort": 9229,
+            "protocol": "tcp",
+            "hostPort": 9229
+          }
+        ]
+      },
+      "node": {
+        "enableDebugging": true
+      }
+    }
+  ]
+}

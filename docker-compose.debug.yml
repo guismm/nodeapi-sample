@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  nodeapi-sample:
+    image: nodeapi-sample
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 45000:45000
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 --inspect=0.0.0.0 index.js
