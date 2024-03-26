@@ -6,7 +6,7 @@
   "author": "Guilherme Silveira Maia de Mendonça",
   "license": "Unlicensed",
   "dependencies": {
-    "express": "4.17.1",
+    "express": "4.19.2",
     "mongoose": "5.7.13"
   },
   "scripts": {
