@@ -7,7 +7,7 @@
   "license": "Unlicensed",
   "dependencies": {
     "express": "4.17.1",
-    "mongoose": "5.7.13"
+    "mongoose": "5.13.20"
   },
   "scripts": {
     "start": "node --inspect=0.0.0.0 index.js",
